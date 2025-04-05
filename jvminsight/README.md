@@ -6,6 +6,15 @@ This jvminsights lets you attach to jvm processes on your local machine and get 
 
 Also lets you execute tools found in `bin` folder of `java.home`.
 
+Below is example of output from using the provided `investigateJavaProcess` prompt:
+![](images/jvminsight-demo.png)
+
+Other interesting questions you can consider asking are:
+
+- "What java processes do I have running?"
+- "Why is my petclinic using so much memory?"
+- "Create a visual of the memory usage of my process" 
+
 ## General Usage 
 
 1. Install [jbang](https://www.jbang.dev/download/)
