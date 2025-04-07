@@ -34,7 +34,7 @@ public class MCPServerJDBC {
     ObjectMapper mapper;
 
     @ConfigProperty(name = "jdbc.url")
-    String jdbcUrl;
+    Optional<String> jdbcUrl;
 
     @ConfigProperty(name = "jdbc.user")
     Optional<String> jdbcUser;
@@ -43,7 +43,8 @@ public class MCPServerJDBC {
     Optional<String> jdbcPassword;
 
     private Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(jdbcUrl, jdbcUser.orElse(null), jdbcPassword.orElse(null));
+        return DriverManager.getConnection(jdbcUrl.orElseThrow(() -> new IllegalStateException("jdbc.url is not set")),
+                jdbcUser.orElse(null), jdbcPassword.orElse(null));
     }
 
     @Tool(description = "Execute a SELECT query on the jdbc database")
