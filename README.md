@@ -8,6 +8,10 @@ These lets you extend the capabilities of your MCP enabled LLM (Large Language M
 These also work in MCP enabled LLM applications, like Claude Desktop. You can find other clients on
 [Awesome MCP Clients](https://github.com/punkpeye/awesome-mcp-clients) page.
 
+## Running the servers
+
+All of these servers are available to run with [jbang everywhere](https://jbang.dev/everywhere): Java, JavaScript, Python and more. Where it says `jbang` it can be replaced with `npx @jbangdev/jbang` or `uvx jbang` or `pipx jbang` dependent on your preference.
+
 ## Servers
 
 ### [jdbc](jdbc)
@@ -22,9 +26,19 @@ jbang jdbc@quarkiverse/quarkus-mcp-servers
 
 See more in the [jdbc readme](jdbc/README.md).
 
-### [filesystem](filesystem)
+### [jvminsight](jvminsight)
 
-![](filesystem/images/filesystem-demo.png)
+![](jvminsight/images/jvminsight-demo.png)
+
+The `jvminsight` server is a server that can be used to inspect a running JVM process.
+
+```shell
+jbang jvminsight@quarkiverse/quarkus-mcp-servers
+```
+
+See more in the [jvminsight readme](jvminsight/README.md).
+
+### [filesystem](filesystem)
 
 The `filesystem` server is a file system server that can be used to serve files from a file system.
 
@@ -105,7 +119,7 @@ Then run the following command to generate a new server for i.e. jfr:
 ```shell
 mkdir jfr
 cd jfr
-jbang -t mcp jfr
+jbang init -t mcp jfr
 ```
 
 This will create the `jfr` directory with a Hello World MCP server.
