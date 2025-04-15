@@ -20,8 +20,6 @@ jbang github@quarkiverse/quarkus-mcp-servers
 
 ## Example interaction
 
-"login with token: <secret token>"
-
 "list issues for maxandersen/metatest"
 
 "add comment to last issue with body: 'This is a test comment'"
@@ -49,23 +47,6 @@ Below are the MCP components provided by this server.
      to revoke the MCP Servers authentication for the sessionid.
 
 
-## Claude Desktop Config and [mcp-cli](https://github.com/chrishayuk/mcp-cli)
-
-Add this to your `claude_desktop.json` or `server_config.json` file:
-
-```json
-{
-  "mcpServers": {
-    "jdbc": {
-      "command": "jbang",
-      "args": [
-        "mcp-server-github@quarkiverse/quarkus-mcp-server"
-      ]
-    }
-  }
-}
-```
-
 ## Creating an OAuth2 App with GitHub
 
 Navigate to https://github.com/settings/developers
@@ -85,8 +66,8 @@ Copy the client ID and secret to the appropriate properties within application.p
 Ensure the properties are uncommented (they are commented by default)
 Rebuild and install this server.
 
-### Setting the credentials via arguments using claude json.
-Add the arguments as below to the end of the argument list.
+### Setting the credentials via arguments using claude json / and [mcp-cli](https://github.com/chrishayuk/mcp-cli)
+Add the arguments as below to the end of the argument list in your `claude_desktop.json` or `server_config.json` file:
 
 ```json
 {
@@ -102,3 +83,4 @@ Add the arguments as below to the end of the argument list.
   }
 }
 ```
+
