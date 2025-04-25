@@ -37,7 +37,7 @@ public class MCPRestBasedAuthManager {
         String rawToken = accessToken.getToken();
         session.setToken(sessionid, rawToken);
         return "<html><body>Thank you " + userInfo.getName()
-                + ",<br>You are now authorized for ozzynet, to logout <a href=\"http://127.0.0.1:8080/logout/" + sessionid
+                + ",<br>You are now authorized, to logout <a href=\"http://127.0.0.1:8080/logout/" + sessionid
                 + "\">click here.</a><br>DEBUG TOKEN:" + rawToken + "</body></html>";
     }
 
@@ -47,6 +47,6 @@ public class MCPRestBasedAuthManager {
     public String logout(@PathParam("sessionid") String sessionid) {
         log.info("Deauthing " + sessionid);
         session.setToken(sessionid, null);
-        return "OzzyNet authorization revoked";
+        return "Authorization revoked";
     }
 }

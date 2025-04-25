@@ -5,6 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>mcp-server-github</artifactId>
 
+    <name>MCP Servers :: GitHub</name>
+
     <parent>
         <groupId>io.quarkiverse.mcp.servers</groupId>
         <artifactId>mcp-servers-parent</artifactId>
@@ -54,24 +56,14 @@
             <artifactId>quarkus-arc</artifactId>
         </dependency>
         <dependency>
-            <groupId>jakarta.enterprise</groupId>
-            <artifactId>jakarta.enterprise.cdi-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-oidc-client</artifactId>
-        </dependency>
-        <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-oidc</artifactId>
         </dependency>
-
         <dependency>
             <groupId>io.quarkiverse.githubapi</groupId>
             <artifactId>quarkus-github-api</artifactId>
             <version>1.326.0</version>
         </dependency>
-
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-junit5</artifactId>

@@ -23,7 +23,7 @@ import io.quarkiverse.mcp.server.WrapBusinessError;
 import io.quarkiverse.mcp.server.runtime.JsonTextContentEncoder;
 
 @WrapBusinessError(IOException.class)
-public class MCPToolsGitHub {
+public class MCPServerGitHub {
 
     private static final Logger log = LoggerFactory.getLogger(MCPRestBasedAuthManager.class);
 

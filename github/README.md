@@ -75,7 +75,7 @@ Add the arguments as below to the end of the argument list in your `claude_deskt
     "jdbc": {
       "command": "jbang",
       "args": [
-        "mcp-server-github@quarkiverse/quarkus-mcp-server",
+        "github@quarkiverse/quarkus-mcp-server",
         "-Dquarkus.oidc.client-id=XXX",
         "-Dquarkus.oidc.credentials.secret=YYY",
       ]
